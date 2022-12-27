@@ -25,19 +25,19 @@ class Picking(models.Model):
             if move_lines_categ_id[0].id != self.categ_id.id:
                 raise UserError(_("All the products must belongs to the picking category %s!")%self.categ_id.name)
         elif self.transfer_by_product_categ and self.categ_id and self.move_ids_without_package:
-            move_lines_categ_id = self._get_moves_categ('move_ids_without_package')()
+            move_lines_categ_id = self._get_moves_categ('move_ids_without_package')
             if len(move_lines_categ_id) > 1:
                 raise UserError(_("All the products must belongs to the same category!"))
             if move_lines_categ_id[0].id != self.categ_id.id:
                 raise UserError(_("All the products must belongs to the picking category %s!")%self.categ_id.name)
         elif self.transfer_by_product_categ and self.categ_id and self.move_line_ids:
-            move_line_ids_categ_id = self._get_moves_categ('move_line_ids')()
+            move_line_ids_categ_id = self._get_moves_categ('move_line_ids')
             if len(move_line_ids_categ_id) > 1:
                 raise UserError(_("All the products must belongs to the same category!"))
             if move_line_ids_categ_id[0].id != self.categ_id.id:
                 raise UserError(_("All the products must belongs to the picking category %s!")%self.categ_id.name)
         elif self.transfer_by_product_categ and self.categ_id and self.move_line_ids_without_package:
-            move_line_ids_without_package_categ_id = self._get_moves_categ('move_line_ids_without_package')()
+            move_line_ids_without_package_categ_id = self._get_moves_categ('move_line_ids_without_package')
             if len(move_line_ids_without_package_categ_id) > 1:
                 raise UserError(_("All the products must belongs to the same category!"))
             if move_line_ids_without_package_categ_id[0].id != self.categ_id.id:
