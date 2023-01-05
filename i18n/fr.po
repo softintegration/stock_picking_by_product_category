@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Si cette case est cochée, le système affichera le champ <Catégorie d'article>"
 " dans le transfert et seulement les articles inclus dans le "
-"la catégorie spécifiée peuvent être sélectionnés et transférés.""
+"la catégorie spécifiée peuvent être sélectionnés et transférés."
 
 #. module: stock_picking_by_product_category
 #: model:ir.model,name:stock_picking_by_product_category.model_stock_picking_type

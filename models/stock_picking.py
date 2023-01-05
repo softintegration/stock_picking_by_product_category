@@ -8,7 +8,7 @@ class Picking(models.Model):
     _inherit = "stock.picking"
 
     transfer_by_product_categ = fields.Boolean(related='picking_type_id.transfer_by_product_categ')
-    categ_id = fields.Many2one('product.category', 'Product Category',)
+    categ_id = fields.Many2one('product.category', 'Product Category',states={'done': [('readonly', True)], 'cancel': [('readonly', True)]},)
 
 
     @api.onchange('categ_id')
