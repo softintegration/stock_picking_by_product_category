@@ -12,7 +12,7 @@ class StockMoveLine(models.Model):
     @api.onchange('transfer_by_product_categ')
     def _onchange_transfer_by_product_categ(self):
         if self.transfer_by_product_categ and self.picking_id.categ_id:
-            return {'domain':{'product_id':[('categ_id','=',self.picking_id.categ_id.id)]}}
+            return {'domain':{'product_id':[('categ_id','child_of',self.picking_id.categ_id.id)]}}
         elif self.transfer_by_product_categ and not self.picking_id.categ_id:
             return {'domain':{'product_id':[('id','=',-1)]}}
 

@@ -29,13 +29,6 @@
                 <xpath expr="//field[@name='move_ids_without_package']/form/group/field[@name='product_id']" position="before">
                     <field name="transfer_by_product_categ" invisible="1"/>
                 </xpath>
-                <!--<xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="attributes">
-                    <attribute name="attrs">{'invisible':[('transfer_by_product_categ','=',True)]}</attribute>
-                </xpath>
-                <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="attrs">
-                    <attribute name="domain">[('categ_id','=',parent.categ_id)]</attribute>
-                    <attribute name="context">{'default_detailed_type': 'product','default_categ_id':parent.categ_id}</attribute>
-                </xpath>-->
             </field>
         </record>
 
